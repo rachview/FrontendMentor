@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  /* Primary */
+  --clr-paleblue: hsl(225, 100%, 94%);
+  --clr-brightblue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --clr-darkblue: hsl(223, 47%, 23%);
+  --clr-desaturatedblue: hsl(224, 23%, 55%);
+  --clr-verypaleblue: hsl(225, 100%, 98%);
+
+  /* Hover */
+  --clr-purple: hsl(245, 83%, 68%);
+
+  /* Shadows */
+  --clr-paleblue-transparent: hsla(225, 100%, 94%, 0.4);
+  --clr-desaturatedblue-transparent: hsla(224, 23%, 55%, 0.5);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  height: 100vh;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--clr-desaturatedblue);
+  background-color: var(--clr-paleblue);
+  background-image: url("../imgs/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.container {
+  max-width: 375px;
+  background-color: var(--clr-verypaleblue);
+  border-radius: 1em;
+  box-shadow: 0 0 20px var(--clr-desaturatedblue);
+}
+
+.container-hero--img {
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+
+.container-body {
+  padding: 0 1.5em;
+}
+
+.row {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.row-title {
+  color: var(--clr-darkblue);
+  font-weight: 900;
+  line-height: 1;
+  margin: 0.5em 0 1.15em 0;
+}
+
+.gray {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--clr-paleblue-transparent);
+  padding: 1.25em 0.5em;
+  border-radius: 0.875em;
+}
+
+.margin {
+  margin-right: 2.875em;
+}
+
+.col-title {
+  color: var(--clr-darkblue);
+  font-size: 15.875px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0.2em;
+}
+
+.col-link {
+  color: var(--clr-brightblue);
+  font-weight: 700;
+}
+
+.col-link:hover {
+  text-decoration: none;
+  color: var(--clr-purple);
+}
+
+.col-link,
+.btn-cancel {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.col-link,
+.btn-cancel,
+.btn-proceed {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-proceed {
+  cursor: pointer;
+  width: 100%;
+  padding: 1.5em 0;
+  background-color: var(--clr-brightblue);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--clr-verypaleblue);
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0 5px 16px var(--clr-desaturatedblue-transparent);
+}
+
+.btn-proceed:hover {
+  background-color: var(--clr-purple);
+  box-shadow: none;
+}
+
+.btn-cancel {
+  color: var(--clr-desaturatedblue);
+  width: 100%;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1.5em 0 0 0;
+}
+
+.btn-cancel:hover {
+  color: var(--clr-darkblue);
+}
+
+@media (min-width: 1500px) {
+  body {
+    background-image: url("../imgs/pattern-background-desktop.svg");
+  }
+  .container {
+    width: 23.5%;
+    max-width: 1440px;
+  }
+  .container-body {
+    padding: 0 2.5em;
+  }
+  .btn-proceed {
+    padding: 1em 0;
+  }
+}
