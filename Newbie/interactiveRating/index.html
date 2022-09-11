@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/index.js" defer></script>
+  <title>Frontend Mentor: Interactive rating component</title>
+</head>
+
+<body>
+
+  <!-- Rating state start -->
+  <section class="card">
+    <div class="container">
+      <div class="container-star">
+        <img src="./img/icon-star.svg" alt="">
+      </div>
+      <div class="container-body">
+        <h1>How did we do?</h1>
+        <p> Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+      </div>
+      <form class="form-btn">
+        <div class="form-btn--row">
+
+          <input class="btn-radio" type="radio" name="rating" id="rating1" value="rate1">
+          <label class="btn-label" for="rating1">1
+          </label>
+
+          <input class="btn-radio" type="radio" name="rating" id="rating2" value="rate2">
+          <label class="buttons btn-label" for="rating2">2</label>
+
+          <input class="btn-radio" type="radio" name="rating" id="rating3" value="rate3">
+          <label class="buttons btn-label" for="rating3">3</label>
+
+
+          <input class="btn-radio" type="radio" name="rating" id="rating4" value="rate4">
+          <label class="buttons btn-label" for="rating4">4</label>
+
+
+          <input class="btn-radio" type="radio" name="rating" id="rating5" value="rate5" checked><label
+            class="buttons btn-label" for="rating5">5</label>
+
+        </div>
+        <input class="btn submit-btn" type="button" value="Submit">
+
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <section class="card-thankyou hidden">
+    <div class="container">
+      <div class="container-img"><img src="./img/illustration-thank-you.svg" alt="Mobile phone recieving information">
+      </div>
+
+      <div class="container-rating">
+        <p>You selected
+          <span class="container-rating--span" id="user-rating"></span>
+          out of 5
+        </p>
+      </div>
+
+      <div class="container-body">
+        <h1>Thank you!</h1>
+        <p> We appreciate you taking the time to give a rating. If you ever need more support,
+          don't hesitate to get in touch!</p>
+      </div>
+    </div>
+
+
+  </section>
+
+</body>
+
+</html>
