@@ -12,4 +12,4 @@ In detail: Wrote HTML code, moved onto CSS code, and worked mobile to desktop. U
 
 Problems: The hardest problem was trying to get the "thank you card" to update with the rating. After that, I had trouble trying to set up an if-statement to check for empty strings.
 
-Final Thoughts: Need to learn way for Javascript. Html and CSS easy. Never would have figured out radio buttons without dcode (had the input and label reversed, and I didn't know how to get the checked state): https://www.youtube.com/watch?v=GDh9uToZkYg
+Final Thoughts: Need to learn way more Javascript. Html and CSS easy. Never would have figured out radio buttons without dcode (had the input and label reversed, and I didn't know how to get the checked state): https://www.youtube.com/watch?v=GDh9uToZkYg
