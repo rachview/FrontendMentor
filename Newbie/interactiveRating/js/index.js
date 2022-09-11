@@ -27,7 +27,7 @@ submit.addEventListener("click", () => {
   timer();
 });
 
-//This gets the rating label number and passes it into the span element of the thank you
+//This gets the rating label number and passes it into the span element of the thank you card
 btnRating.forEach((rating) => {
   rating.addEventListener("click", () => {
     userRating.innerHTML = rating.innerHTML;
