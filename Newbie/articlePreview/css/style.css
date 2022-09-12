@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --clr-vdgblue: hsl(217, 19%, 35%);
+  --clr-ddblue: hsl(214, 17%, 51%);
+  --clr-gblue: hsl(212, 23%, 69%);
+  --clr-lgblue: hsl(210, 46%, 95%);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-gblue);
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--clr-ddblue);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: var(--clr-vdgblue);
+}
+
+section {
+  display: grid;
+  place-items: center;
+  height: 95%;
+}
+
+.container {
+  max-width: 375px;
+  width: 100%;
+  background-color: var(--clr-lgblue);
+  border-radius: 1em;
+  box-shadow: 1px 1px 15px var(--clr-ddblue);
+}
+
+.container-hero {
+  background-image: url(../img/drawers.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 250px;
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+
+.container-body {
+  padding: 3.5em 2.5em 2em;
+  letter-spacing: 0.25px;
+}
+
+.container-footer {
+  padding: 2em 2.5em;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1em;
+}
+
+.container-footer--img img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.container-footer--img img,
+.container-footer--user__name,
+.container-footer--user__date {
+  cursor: pointer;
+}
+
+.container-footer--share,
+.active .footer-col--shareimg {
+  cursor: pointer;
+  background-color: var(--clr-gblue);
+  padding: 1em;
+  border-radius: 50%;
+}
+
+.container-footer--user__name {
+  font-weight: 700;
+  color: var(--clr-vdgblue);
+}
+
+/* Active footer */
+.active {
+  display: contents;
+  padding: 2em 2.5em;
+  background-color: var(--clr-vdgblue);
+  border-radius: 0 0 1em 1em;
+  color: var(--clr-gblue);
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.active .footer-col--share {
+  letter-spacing: 5px;
+}
+
+.active .list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.active .list-items {
+  cursor: pointer;
+}
+/* active footer */
+.active-modal {
+  display: none;
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    position: relative;
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: 2, auto 40%;
+    grid-template-areas:
+      "img body"
+      ". footer";
+  }
+
+  .container-hero {
+    grid-area: img;
+    grid-row: span 2;
+    border-radius: 1em 0 0 1em;
+    width: 300px;
+    height: auto;
+    background-position: top left;
+  }
+
+  .container-body {
+    grid-area: body;
+  }
+
+  .container-footer {
+    grid-area: footer;
+    padding: 2em 2.5em 2.5em;
+  }
+  .active {
+    display: none;
+  }
+
+  /* active modal */
+  .active-modal {
+    display: contents;
+    position: absolute;
+    right: -5em;
+    bottom: 8em;
+    background-color: var(--clr-vdgblue);
+    box-shadow: 1px 1px 10px var(--clr-ddblue);
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1.5em;
+    padding: 1em 1.5em;
+    color: var(--clr-gblue);
+  }
+
+  .active-modal::after,
+  .active-modal::before {
+    position: absolute;
+    content: "";
+    bottom: -6px;
+    height: 8px;
+    width: 16px;
+    background-color: var(--clr-vdgblue);
+  }
+
+  .active-modal::after {
+    transform: rotate(45deg);
+    left: 42%;
+  }
+
+  .active-modal::before {
+    transform: rotate(-45deg);
+    left: 45%;
+  }
+
+  .active-modal .col {
+    letter-spacing: 5px;
+  }
+
+  .active-modal .list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .active-modal .list-items {
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+  /* active modal  */
+}
