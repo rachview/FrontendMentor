@@ -4,7 +4,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 Credit: All images and designs were provided by FrontEnd Mentor.
 
-Task: Follow the design created by FrontEnd Mentor to create a article preview component. Keep it as close to the design as possible, and using the styles they have chosen.
+Task: Follow the design created by FrontEnd Mentor to create an article preview component. Keep it as close to the design as possible, and using the styles they have chosen.
 
 What was used: HTML 5, CSS, JS.
 
