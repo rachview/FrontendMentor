@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --clr-vdgblue: hsl(217, 19%, 35%);
+  --clr-ddblue: hsl(214, 17%, 51%);
+  --clr-gblue: hsl(212, 23%, 69%);
+  --clr-lgblue: hsl(210, 46%, 95%);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-gblue);
+  height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--clr-ddblue);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: var(--clr-vdgblue);
+}
+
+section {
+  display: grid;
+  place-items: center;
+  height: 95%;
+}
+
+.container {
+  max-width: 375px;
+  width: 100%;
+  background-color: var(--clr-lgblue);
+  border-radius: 1em;
+  box-shadow: 1px 1px 15px var(--clr-ddblue);
+}
+
+.container-hero {
+  background-image: url(../img/drawers.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 250px;
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+
+.container-body {
+  padding: 3.5em 2.5em 1em;
+  letter-spacing: 0.25px;
+}
+
+.container-footer {
+  position: relative;
+  padding: 1em 2.5em 2em;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1em;
+  overflow: hidden;
+}
+
+.col-share {
+  background-color: var(--clr-gblue);
+  padding: 0.75em 1em;
+  border-radius: 50%;
+}
+
+.share-svg {
+  fill: var(--clr-vdgblue);
+  transition: 0.3s;
+}
+
+/* Active */
+.container-footer::before {
+  transform: translateY(110px);
+  position: absolute;
+  content: "";
+  background-color: var(--clr-vdgblue);
+  height: 101%;
+  width: 100%;
+  border-radius: 0 0 1em 1em;
+  transition: 0.3s ease transform;
+  transform-origin: top;
+}
+
+.active.container-footer::before {
+  transform: translateY(0);
+  transition: 0.3s ease transform;
+}
+
+.active .col-share {
+  background-color: var(--clr-ddblue);
+  z-index: 100;
+}
+
+.active .share-svg {
+  fill: var(--clr-lgblue);
+}
+
+.active .share-list {
+  opacity: 1;
+  transition: 0.3s opacity ease;
+  transition-delay: 0.2s;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 0.3s opacity ease;
+}
+
+/* Active end */
+
+.col-share--info {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 8%;
+  top: 32%;
+}
+
+.userimg {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: 700;
+  color: var(--clr-vdgblue);
+}
+
+.share-list {
+  display: flex;
+  gap: 1.75em;
+  align-items: center;
+  list-style: none;
+}
+
+.share-list--item {
+  color: var(--clr-gblue);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 17px;
+}
+
+.share-list--item img {
+  width: 30px;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    position: relative;
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: 2, auto 40%;
+    grid-template-areas:
+      "img body"
+      ". footer";
+  }
+
+  .container-hero {
+    grid-area: img;
+    grid-row: span 2;
+    border-radius: 1em 0 0 1em;
+    width: 300px;
+    height: auto;
+    background-position: top left;
+  }
+
+  .container-body {
+    grid-area: body;
+  }
+
+  .container-footer {
+    grid-area: footer;
+    padding: 1.5em 2.5em 2.5em;
+    overflow: unset;
+  }
+
+  .share-list--item img {
+    width: 25px;
+  }
+
+  .container-footer::before {
+    transform: unset;
+    opacity: 0;
+    position: absolute;
+    content: "";
+    background-color: var(--clr-vdgblue);
+    height: 55%;
+    width: 65%;
+    top: -4.5em;
+    right: -8em;
+    border-radius: 1em;
+    transition: 0.3s ease transform;
+  }
+
+  .active.container-footer::after {
+    position: absolute;
+    top: -0.15em;
+    left: 29em;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 20px;
+    border-color: var(--clr-vdgblue) transparent transparent transparent;
+  }
+
+  .active.container-footer::before {
+    opacity: 1;
+  }
+
+  .col-share--info {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 22.5em;
+    top: -3.35em;
+  }
+
+  .share-list--item {
+    letter-spacing: 6px;
+  }
+}
