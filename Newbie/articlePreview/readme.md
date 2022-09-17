@@ -16,4 +16,4 @@ Final Thoughts: Harder than it looks. Never would of figured out the Javascript 
 
 # Verison 1.1: index1.html (style1.css, and index1.js)
 
-Redid the project, built the JS early (after I redid the mobile). Used the CSS in order to transform the share element, making WAY-WAY easier (getting rid of the extra divs). Also, I copied the SVG directly into the HTML worked way better for adjusting the style of the button.
+Redid the design project and built the JS early (after I redid the mobile) and simplified it. Used the CSS in order to transform the share element, making WAY-WAY easier (getting rid of the extra divs). Also, I copied the SVG directly into the HTML worked way better for adjusting the style of the button.
