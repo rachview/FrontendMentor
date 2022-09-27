@@ -12,4 +12,4 @@ In detail: Wrote HTML code, moved onto CSS code, and worked desktop to mobile.
 
 Problems: The javascript for this one is rough, watched several tutorials on how to do it but I couldn't get it to work (perhaps will revisit this later). Followed Programming's Fun video for the script: https://www.youtube.com/watch?v=yag59U7ESRE
 
-Final Thoughts: Difficulty the javascript was hard as usual, but I did find out that there is a pseduo class for invalid inputs.
+Final Thoughts: Difficulty - the javascript was hard as usual, but I did find out that there is a pseduo class for invalid inputs.
