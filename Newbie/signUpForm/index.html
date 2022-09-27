@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/index.js" defer></script>
+  <title>Frontend Mentor: Intro component with sign up form</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="container">
+      <div class="container-header">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.</p>
+      </div>
+      <div class="container-body">
+        <div class="row row-purple"><span class="row-purple--span">Try it free 7 days</span> then $20/mo. thereafter
+        </div>
+        <div class="row row-form">
+
+
+          <form class="form-el" id="form" action="/">
+
+
+            <!-- form-container div -->
+            <div class="form-container">
+              <!-- firstname -->
+              <input class="input" id="firstname" type="text" placeholder="First Name" required>
+              <span class="error-icon"><img src="./img/icon-error.svg" alt="Error">
+              </span>
+              <!-- error -->
+              <span class="error">First Name cannot be empty</span>
+            </div>
+            <!-- form-container div -->
+            <div class="form-container">
+              <!-- lastname -->
+              <input class="input" id="lastname" type="text" placeholder="Last Name" required>
+              <span class="error-icon"><img src="./img/icon-error.svg" alt="Error">
+              </span>
+              <!-- error -->
+              <span class="error">Last Name cannot be empty</span>
+            </div>
+            <!-- form-container div -->
+            <div class="form-container">
+              <!-- email -->
+              <input class="input" id="email" type="email" placeholder="Email" required>
+              <span class="error-icon"><img src="./img/icon-error.svg" alt="Error">
+              </span>
+              <!-- error -->
+              <span class="error">Looks like this is not an email</span>
+            </div>
+            <!-- form-container div -->
+            <div class="form-container">
+              <!-- password -->
+              <input class="input" id="password" type="password" placeholder="Password" required>
+              <span class="error-icon"><img src="./img/icon-error.svg" alt="Error">
+              </span>
+              <!-- error -->
+              <span class="error">Password cannot be empty</span>
+            </div>
+
+            <!-- button -->
+            <button type="submit" class="form-btn">Claim your free trial</button>
+            <!-- disclaimer -->
+            <p class="disclaimer">By clicking the button, you are agreeing to our <a class="disclaimer-link"
+                href="#">Terms and Services</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
