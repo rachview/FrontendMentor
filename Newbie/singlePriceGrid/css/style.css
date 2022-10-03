@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  /* Primary */
+  --clr-cyan: hsl(179, 62%, 43%);
+  --clr-cyan-lt: hsla(179, 62%, 43%, 0.777);
+  --clr-byellow: hsl(71, 73%, 54%);
+  /* Neutral */
+  --clr-lgray: hsl(204, 43%, 93%);
+  --clr-gblue: hsl(218, 22%, 67%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-lgray);
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--clr-gblue);
+  line-height: 1.7;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  width: 100%;
+  margin: 4em auto 0;
+}
+
+.container-top {
+  background-color: var(--clr-white);
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.container-top--title {
+  color: var(--clr-cyan);
+}
+
+.container-top--subtitle {
+  color: var(--clr-byellow);
+  font-weight: 700;
+  margin: 1.5em 0;
+}
+
+.container-top,
+.container-left,
+.container-right {
+  padding: 2em 1.5em;
+}
+
+.container-left,
+.container-right {
+  background-color: var(--clr-cyan);
+  color: var(--clr-white);
+  line-height: 1.5;
+}
+
+.container-bottom--title {
+  color: var(--clr-white);
+}
+
+.container-right {
+  border-radius: 0 0 0.5em 0.5em;
+  color: var(--clr-lgray);
+  background-color: var(--clr-cyan-lt);
+}
+
+.container-bottom--price {
+  color: var(--clr-lgray);
+  margin: 1em 0 0.2em;
+}
+
+.price-span {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--clr-white);
+}
+
+.btn {
+  width: 100%;
+  padding: 1em 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  color: var(--clr-white);
+  background-color: var(--clr-byellow);
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: 0 20px 20px hsla(0, 0%, 0%, 0.103);
+  opacity: 1;
+  margin-top: 2em;
+  transition: 0.1s ease-in-out opacity, 0.1s ease-in-out box-shadow;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: none;
+}
+
+.list {
+  list-style: none;
+  margin-top: 1em;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    width: 45%;
+  }
+
+  .container-top,
+  .container-left,
+  .container-right {
+    padding: 3em;
+  }
+
+  .container-top--paragraph {
+    max-width: 60ch;
+  }
+
+  .container-bottom {
+    display: flex;
+  }
+
+  .container-left,
+  .container-right {
+    flex: 50%;
+  }
+
+  .container-left {
+    border-radius: 0 0 0 0.5em;
+  }
+
+  .container-right {
+    border-radius: 0 0 0.5em 0;
+  }
+
+  .btn {
+    margin-top: 2.6em;
+  }
+}
