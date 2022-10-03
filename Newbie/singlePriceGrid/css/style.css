@@ -39,6 +39,9 @@ h2 {
   max-width: 375px;
   width: 100%;
   margin: 4em auto 0;
+  box-shadow: 2px 3px 7px 0px hsla(0, 0%, 0%, 0.35);
+  border-radius: 0.5em;
+  overflow: hidden;
 }
 
 .container-top {
