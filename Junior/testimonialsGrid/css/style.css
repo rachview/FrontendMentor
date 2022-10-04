@@ -128,7 +128,9 @@ article {
   }
 
   .container {
-    padding: 3em 6em;
+    max-width: 1440px;
+    width: 100%;
+    min-width: unset;
     flex-direction: row;
     gap: 2em;
   }
