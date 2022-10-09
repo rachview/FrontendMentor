@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/index.js" defer></script>
+  <title>Frontend Mentor: Notifications page</title>
+
+
+</head>
+
+<body>
+
+  <section class="container">
+    <!-- header -->
+    <div class="container-header">
+      <ul class="list">
+        <li class="list-item item-header">Notification</li>
+        <li class="list-item item-num" id="num-el"></li>
+        <li class="list-item item-mark" id="markread-el">Mark all as read</li>
+      </ul>
+    </div>
+    <!-- the body -->
+    <div class="container-body">
+      <!-- MARK -->
+      <!-- start notification -->
+      <div class="notification unread" id="notify">
+        <!-- first col - avatar for user sending message -->
+        <div class="col">
+          <img class="user-img" src="./img/avatar-mark-webber.webp" alt="">
+        </div>
+        <!-- second col - type of message sent -->
+        <div class="col">
+          <!-- Quick info -->
+          <div class="col-top">
+            <!-- Data -->
+            <div class="row margin-left">
+              <span class="user-name">Mark Webber</span>
+              <span class="user-message">reacted to your recent post My first tournament today!</span>
+              <span class="user-unread"></span>
+            </div>
+            <!-- Time -->
+            <div class="row margin-left timestamp">1m ago</div>
+          </div>
+        </div>
+      </div>
+      <!-- end notification -->
+      <!-- ANGELA -->
+      <!-- start notification -->
+      <div class="notification unread" id="notify">
+        <!-- first col - avatar for user sending message -->
+        <div class="col">
+          <img class="user-img" src="./img/avatar-angela-gray.webp" alt="">
+        </div>
+        <!-- second col - type of message sent -->
+        <div class="col">
+          <!-- Quick info -->
+          <div class="col-top">
+            <!-- Data -->
+            <div class="row margin-left">
+              <span class="user-name">Angela Gray</span>
+              <span class="user-message">followed you</span>
+              <span class="user-unread"></span>
+            </div>
+            <!-- Time -->
+            <div class="row margin-left timestamp">5m ago</div>
+          </div>
+        </div>
+      </div>
+      <!-- end notification -->
+      <!-- JACOB -->
+      <!-- start notification -->
+      <div class="notification unread" id="notify">
+        <!-- first col - avatar for user sending message -->
+        <div class="col">
+          <img class="user-img" src="./img/avatar-jacob-thompson.webp" alt="">
+        </div>
+        <!-- second col - type of message sent -->
+        <div class="col">
+          <!-- Quick info -->
+          <div class="col-top">
+            <!-- Data -->
+            <div class="row margin-left">
+              <span class="user-name">Jacob Thompson</span>
+              <span class="user-message">has joined your group <a class="span-link" href="#">Chess Club</a></span>
+              <span class="user-unread"></span>
+            </div>
+            <!-- Time -->
+            <div class="row margin-left timestamp">1 day ago</div>
+          </div>
+        </div>
+      </div>
+      <!-- end notification -->
+      <!-- Rizky -->
+      <!-- start notification -->
+      <div class="notification message-open" id="notify">
+        <!-- first col - avatar for user sending message -->
+        <div class="col">
+          <img class="user-img" src="./img/avatar-rizky-hasanuddin.webp" alt="">
+        </div>
+        <!-- second col - type of message sent -->
+        <div class="col">
+          <!-- Quick info -->
+          <div class="col-top">
+            <!-- Data -->
+            <div class="row margin-left">
+              <span class="user-name">Rizky Hasanuddin</span>
+              <span class="user-message">sent you a private message</span>
+            </div>
+            <!-- Time -->
+            <div class="row margin-left timestamp">5 days ago</div>
+          </div>
+          <!-- The message -->
+          <div class="col-btm">
+            Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+            I'm already having lots of fun and improving my game.
+          </div>
+        </div>
+      </div>
+      <!-- end notification -->
+      <!-- Kimberly -->
+      <!-- start notification -->
+      <div class="notification message-close" id="notify">
+        <!-- first col - avatar for user sending message -->
+        <div class="col">
+          <img class="user-img" src="./img/avatar-kimberly-smith.webp" alt="">
+        </div>
+        <!-- second col - type of message sent -->
+        <div class="col">
+          <!-- Quick info -->
+          <div class="col-top">
+            <!-- Data -->
+            <div class="row margin-left">
+              <span class="user-name">Kimberly Smith</span>
+              <span class="user-message">commented on your picture</span>
+            </div>
+            <!-- Time -->
+            <div class="row margin-left timestamp">1 week ago</div>
+          </div>
+          <!-- The message -->
+          <div class="col-btm">
+            Hi! I love your image!
+          </div>
+
+        </div>
+        <!-- third col -- img that is commented on -->
+        <div class="col align-to-right">
+          <img class="comment-img" src="./img/image-chess.webp" alt="commented-image">
+        </div>
+      </div>
+      <!-- end notification -->
+      <!-- Nathan -->
+      <!-- start notification -->
+      <div class="notification" id="notify">
+        <!-- first col - avatar for user sending message -->
+        <div class="col">
+          <img class="user-img" src="./img/avatar-nathan-peterson.webp" alt="">
+        </div>
+        <!-- second col - type of message sent -->
+        <div class="col">
+          <!-- Quick info -->
+          <div class="col-top">
+            <!-- Data -->
+            <div class="row margin-left">
+              <span class="user-name">Nathan Peterson</span>
+              <span class="user-message">reacted to your recent post <strong>5 end-game strategies to increase your
+                  win rate</strong></span>
+            </div>
+            <!-- Time -->
+            <div class="row margin-left timestamp">2 weeks ago</div>
+          </div>
+          <!-- The message -->
+
+        </div>
+        <!-- third col -- img that is commented on -->
+
+      </div>
+      <!-- end notification -->
+      <!-- Anna -->
+      <!-- start notification -->
+      <div class="notification" id="notify">
+        <!-- first col - avatar for user sending message -->
+        <div class="col">
+          <img class="user-img" src="./img/avatar-anna-kim.webp" alt="">
+        </div>
+        <!-- second col - type of message sent -->
+        <div class="col">
+          <!-- Quick info -->
+          <div class="col-top">
+            <!-- Data -->
+            <div class="row margin-left">
+              <span class="user-name">Anna Kim</span>
+              <span class="user-message">left the group <a class="span-link" href="#">Chess Club</a></span>
+            </div>
+            <!-- Time -->
+            <div class="row margin-left timestamp">2 weeks ago</div>
+          </div>
+        </div>
+      </div>
+      <!-- end notification -->
+    </div>
+
+  </section>
+
+</body>
+
+</html>

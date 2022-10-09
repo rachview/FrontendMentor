@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+:root {
+  /* Primary */
+  --clr-red: hsl(1, 90%, 64%);
+  --clr-blue: hsl(219, 85%, 26%);
+  /* Neutral */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-verylightgrayishblue: hsl(210, 60%, 98%);
+  --clr-lightgrayishblue1: hsl(211, 68%, 94%);
+  --clr-lightgrayishblue2: hsl(205, 33%, 90%);
+  --clr-grayishblue: hsl(219, 14%, 63%);
+  --clr-darkgrayishblue: hsl(219, 12%, 42%);
+  --clr-verydarkblue: hsl(224, 21%, 14%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  background-color: var(--clr-verylightgrayishblue);
+  color: var(--clr-darkgrayishblue);
+}
+
+.container,
+.notification,
+.col-btm,
+.unread {
+  border-radius: 0.5em;
+}
+
+.notification,
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  list-style: none;
+  gap: 0.5em;
+  padding: 1.5em 0.5em 1.5em;
+}
+
+.item-header,
+.user-name {
+  font-weight: 800;
+  color: var(--clr-verydarkblue);
+}
+
+.item-header,
+.item-num,
+.item-mark,
+.notification {
+  cursor: pointer;
+}
+
+.notification,
+.col-btm {
+  padding: 1em;
+}
+
+.user-img,
+.comment-img {
+  width: 40px;
+  display: block;
+}
+
+.notification,
+.unread,
+.span-link {
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.container {
+  max-width: 375px;
+  margin: 3em auto 0;
+  background-color: var(--clr-white);
+  box-shadow: 2px 2px 10px var(--clr-lightgrayishblue1);
+}
+
+.item-num {
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+  padding: 5px 15px;
+  border-radius: 0.25em;
+}
+
+/* Move Mark all as read */
+.item-mark {
+  margin-left: auto;
+}
+
+.notification {
+  align-items: flex-start;
+}
+
+.notification:hover {
+  background-color: var(--clr-lightgrayishblue1);
+}
+
+.notification + .notification {
+  margin-top: 1em;
+}
+
+.margin-left {
+  margin-left: 0.5em;
+}
+
+.user-unread {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--clr-red);
+  margin-left: 0.25em;
+  visibility: hidden;
+}
+
+.col-btm {
+  border: 1px var(--clr-grayishblue) solid;
+  margin-top: 1em;
+}
+
+.span-link {
+  color: var(--clr-blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.span-link:hover {
+  color: var(--clr-verydarkblue);
+}
+
+.timestamp {
+  color: var(--clr-grayishblue);
+}
+
+/* Active states */
+
+.unread {
+  background-color: var(--clr-verylightgrayishblue);
+  box-shadow: 1px 1px 5px var(--clr-lightgrayishblue2);
+}
+
+.unread .user-unread {
+  visibility: visible;
+}
+
+.message-close .col .col-btm {
+  display: none;
+}
+
+.message-open .col .col-btm {
+  display: block;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    margin-top: 4em;
+    max-width: 1440px;
+    width: 33%;
+    padding: 1em 2em;
+  }
+  .align-to-right {
+    margin-left: auto;
+  }
+}
