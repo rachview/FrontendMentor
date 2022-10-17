@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./assets/js/index.js" defer></script>
+  <title>Frontend Mentor: Intro section with dropdown navigation</title>
+</head>
+
+<body>
+  <div class="bg"></div>
+
+  <header>
+    <img src="./assets/imgs/logo.svg" alt="The snap logo">
+    <div class="menu-mobile" id="menu">
+      <img id="open-menu-el" src="./assets/imgs/icon-menu.svg" alt="">
+      <img class="hidden" id="close-menu-el" src="./assets/imgs/icon-close-menu.svg" alt="">
+    </div>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-list--item">
+          <!-- main menu -->
+          <span id="feature-btn">Features</span>
+          <img class="drop-arrow rotate" id="feature-arrow" src="./assets/imgs/icon-arrow-up.svg" alt="arrow">
+          <!-- submenu of features -->
+          <ul class="features-list hidden" id="feature-list">
+            <li class="features-list--item">
+              <img class="features-icon" src="./assets/imgs/icon-todo.svg" alt="Icon for todo">
+              Todo List
+            </li>
+            <li class="features-list--item">
+              <img class="features-icon" src="./assets/imgs/icon-calendar.svg" alt="Icon for todo">
+              Calendar
+            </li>
+            <li class="features-list--item">
+              <img class="features-icon" src="./assets/imgs/icon-reminders.svg" alt="Icon for todo">
+              Reminders
+            </li>
+            <li class="features-list--item">
+              <img class="features-icon" src="./assets/imgs/icon-planning.svg" alt="Icon for planning">
+              Planning
+            </li>
+          </ul>
+        </li>
+        <li class="nav-list--item">
+          <!-- main menu -->
+          <span id="company-btn">Companies</span> <img class="drop-arrow rotate" id="company-arrow"
+            src="./assets/imgs/icon-arrow-up.svg" alt="arrow">
+          <!-- submenu of companies -->
+          <ul class="companies-list hidden" id="company-list">
+            <li class="companies-list--item">History</li>
+            <li class="companies-list--item">Cur Team</li>
+            <li class="companies-list--item">Blog</li>
+          </ul>
+        </li>
+        <li class="nav-list--item">Careers</li>
+        <li class="nav-list--item margin-push">About</li>
+        <li class="nav-list--item mobile-item-center">Login</li>
+        <li class="nav-list--item mobile-item-center"><a class="btn-register" href="#">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- cta -->
+    <section class="cta">
+      <h1>Make <span>remote work</span></h1>
+      <p>Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.</p>
+
+      <a href="#" class="btn-cta">Learn more</a>
+      <ul class="logo-list">
+        <li class="logo-list--item"><img src="./assets/imgs/client-databiz.svg" alt="The logo for databix"></li>
+        <li class="logo-list--item"><img src="./assets/imgs/client-audiophile.svg" alt="The logo for audiophile"></li>
+        <li class="logo-list--item"><img src="./assets/imgs/client-meet.svg" alt="The logo for meet"></li>
+        <li class="logo-list--item"><img src="./assets/imgs/client-maker.svg" alt="The logo for maker"></li>
+      </ul>
+    </section>
+    <!-- image hero -->
+    <section class="hero">
+      <!-- image background goes here -->
+    </section>
+  </main>
+
+
+</body>
+
+</html>

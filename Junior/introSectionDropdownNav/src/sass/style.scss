@@ -1,0 +1,336 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+// Variables
+$colors: (
+  secondary: hsl(0 0% 98%),
+  primary: hsl(0 0% 41%),
+  primary-dark: hsl(0 0% 8%),
+);
+
+$transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+//Functions
+// Colors
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+//To rem
+@function toRem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Do not use units when using the toRem() function';
+  }
+}
+
+//To em
+@function toEm($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + em;
+  } @else {
+    @error 'Do not use units when using the em() function';
+  }
+}
+
+//Mixins
+@mixin desktop {
+  @media (min-width: toEm(1440)) {
+    @content;
+  }
+}
+
+// Layout
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: color(primary);
+  background-color: color(secondary);
+  font-size: toRem(18);
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  height: 100vh;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  // Fade when menu open
+  .fade {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+///Active states
+
+.hidden {
+  display: none;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.nav-open {
+  transform: translateX(0);
+  transition: transform 250ms ease-in-out;
+
+  @include desktop {
+    transform: translateX(0);
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1.25em 1em;
+  width: 100%;
+
+  @include desktop {
+    padding: 1em 2em;
+    justify-content: left;
+    gap: 5em;
+  }
+
+  .menu-mobile {
+    z-index: 3;
+    cursor: pointer;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  nav {
+    position: absolute;
+    width: 64vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: color(secondary);
+    z-index: 2;
+    transform: translateX(100vw);
+    transition: transform 250ms ease-in-out;
+
+    @include desktop {
+      position: unset;
+      width: 100vw;
+      height: auto;
+      top: 0;
+      transform: translateX(0);
+
+      .margin-push {
+        margin-right: auto;
+      }
+    }
+
+    .mobile-item-center {
+      text-align: center;
+    }
+
+    .nav-list,
+    .features-list,
+    .companies-list {
+      list-style: none;
+    }
+
+    .nav-list {
+      position: absolute;
+      width: 100%;
+      top: 5em;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      padding: 1.5em;
+      cursor: pointer;
+
+      &--item:hover {
+        color: color(primary-dark);
+
+        & .features-list--item,
+        .companies-list--item {
+          color: color(primary);
+        }
+      }
+
+      @include desktop {
+        position: unset;
+        top: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        gap: 2em;
+
+        // Push Login and Button away
+        .margin-push {
+          margin-right: auto;
+        }
+      }
+
+      .drop-arrow {
+        display: inline-block;
+      }
+
+      .features-list,
+      .companies-list {
+        padding: 1em;
+
+        &--item {
+          padding: 0.5em;
+
+          &:hover {
+            color: color(primary-dark);
+          }
+        }
+
+        @include desktop {
+          position: absolute;
+          top: 2em;
+          background-color: color(secondary);
+          padding: 1em;
+          box-shadow: toEm(1) toEm(1) toEm(35) rgba(0, 0, 0, 0.2);
+          border-radius: 1em;
+        }
+      }
+
+      .features-icon {
+        display: inline-block;
+      }
+
+      .btn-register {
+        width: 100%;
+        text-decoration: none;
+        color: color(primary-dark);
+        padding: 0.5em 1.5em;
+        display: inline-block;
+        border-radius: 1em;
+        border: toRem(1) solid color(primary-dark);
+
+        @include desktop {
+          width: unset;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 3em;
+  margin: 0 auto;
+  max-width: toEm(375);
+
+  @include desktop {
+    max-width: toEm(1440);
+    flex-direction: row;
+    gap: 5em;
+    max-width: 85%;
+    height: 100%;
+  }
+
+  section.hero {
+    width: 100%;
+    height: toEm(260);
+    background-image: url(../assets/imgs/image-hero-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include desktop {
+      background-image: url(../assets/imgs/image-hero-desktop.png);
+      background-size: cover;
+      height: auto;
+      flex: 1 0 45%;
+    }
+  }
+
+  section.cta {
+    padding: 0 1em;
+    text-align: center;
+
+    @include desktop {
+      flex: 1 0 45%;
+      text-align: left;
+      align-self: center;
+
+      p {
+        width: 45ch;
+      }
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: toRem(33.5);
+      color: color(primary-dark);
+      line-height: 1;
+      margin-bottom: 0.5em;
+      word-break: break-all;
+
+      @include desktop {
+        font-size: toRem(110);
+
+        & span {
+          word-break: keep-all;
+        }
+      }
+    }
+
+    .btn-cta {
+      display: inline-block;
+      padding: 0.875em 1.875em;
+      margin: 1em 0 2.5em;
+      border-radius: 1em;
+      border: toRem(1) solid color(primary-dark);
+      background-color: color(primary-dark);
+      color: color(secondary);
+      font-weight: 700;
+      text-decoration: none;
+      transition: $transition;
+
+      @include desktop {
+        margin: 3em 0 5em;
+        padding: 1em 2.5em;
+      }
+
+      &:hover {
+        background-color: color(secondary);
+        color: color(primary-dark);
+      }
+    }
+
+    .logo-list {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+
+      @include desktop {
+        justify-content: space-between;
+      }
+    }
+  }
+}
