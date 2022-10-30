@@ -1,0 +1,35 @@
+@use '../utilities/' as u;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: u.$font;
+  font-weight: 800;
+  font-size: u.rem(22);
+  color: var(--primary);
+  background-color: var(--secondary-dk);
+
+  @include u.breakpoint(medium) {
+    font-size: u.rem(25);
+  }
+
+  @include u.breakpoint(large) {
+    font-size: u.rem(28);
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

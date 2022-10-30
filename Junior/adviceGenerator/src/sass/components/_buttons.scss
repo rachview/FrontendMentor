@@ -1,0 +1,25 @@
+@use '../utilities/' as u;
+
+.main--btn {
+  cursor: pointer;
+  background-color: var(--accent);
+  border-radius: 50%;
+  border: none;
+  width: u.em(70);
+  height: u.em(70);
+  padding: 1.25em;
+  position: absolute;
+  bottom: -2em;
+  left: 0;
+  right: 0;
+  margin: 0 auto; //centers it: https://www.freecodecamp.org/news/how-to-center-an-absolute-positioned-element/
+  z-index: 1;
+  box-shadow: none;
+  transition: box-shadow 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 u.em(20) var(--accent);
+    outline-color: var(--accent);
+  }
+}

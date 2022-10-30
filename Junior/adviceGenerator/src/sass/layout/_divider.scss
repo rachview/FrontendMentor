@@ -1,0 +1,15 @@
+@use '../utilities' as u;
+
+.main--divider {
+  background-image: url(../assets/imgs/pattern-divider-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: u.em(16);
+  margin-block: 1.5em;
+
+  @include u.breakpoint(large) {
+    background-image: url(../assets/imgs/pattern-divider-desktop.svg);
+  }
+}

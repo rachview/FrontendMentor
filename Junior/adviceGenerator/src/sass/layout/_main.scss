@@ -1,0 +1,19 @@
+@use '../utilities/' as u;
+
+main {
+  background-color: var(--secondary-md);
+  margin: 0 auto;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  max-width: 95vw;
+  text-align: center;
+  position: relative;
+
+  @include u.breakpoint(medium) {
+    max-width: 50vw;
+  }
+
+  @include u.breakpoint(large) {
+    max-width: u.em(300);
+  }
+}

@@ -1,0 +1,37 @@
+@use '../utilities/' as u;
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: u.rem(12);
+  color: var(--accent);
+  letter-spacing: u.rem(3);
+  margin-block: 0 1.5em;
+
+  @include u.breakpoint(medium) {
+    font-size: u.rem(13.875);
+  }
+
+  @include u.breakpoint(large) {
+    font-size: u.rem(14);
+  }
+}
+
+p {
+  line-height: 1.5;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
