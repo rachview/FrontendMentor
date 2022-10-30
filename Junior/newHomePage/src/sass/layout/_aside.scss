@@ -1,0 +1,39 @@
+@use '../util/' as u;
+
+.aside {
+  background-color: var(--neutral-verydarkblue);
+  color: var(--neutral-grayblue);
+  padding: 1em;
+  max-height: u.em(490);
+
+  @include u.breakpoint(large) {
+    grid-area: aside;
+    grid-column: 3 / 4;
+  }
+
+  .aside-article {
+    padding-block: 1.5em;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: u.em(1);
+      width: 100%;
+      background-color: var(--neutral-darkgrayblue);
+    }
+
+    &--link {
+      color: var(--neutral-white);
+      margin-block: 0.5em;
+
+      &:hover,
+      &:focus {
+        color: var(--primary-orange);
+      }
+    }
+  }
+}

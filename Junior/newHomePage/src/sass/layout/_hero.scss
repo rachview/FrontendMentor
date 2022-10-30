@@ -1,0 +1,52 @@
+@use '../util/' as u;
+
+.hero {
+  @include u.breakpoint(large) {
+    grid-area: hero;
+    grid-column: 1 / 3;
+  }
+
+  .hero-img {
+    background-image: url('../imgs/image-web-3-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: u.em(500);
+    width: 100%;
+
+    @include u.breakpoint(large) {
+      background-image: url('../imgs/image-web-3-desktop.jpg');
+      height: u.em(300);
+    }
+  }
+
+  .hero-body {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    @include u.breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+
+  .hero-btn {
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: u.rem(2.5);
+    font-weight: 700;
+    padding: 0.875em 2em;
+    border-radius: 0;
+    border: none;
+    background-color: var(--primary-red);
+    color: var(--neutral-white);
+    margin-block: 2em 0;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: var(--neutral-verydarkblue);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use '../util/' as u;
+
+.stories {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  @include u.breakpoint(large) {
+    flex-direction: row;
+    gap: 3em;
+    grid-area: articles;
+    grid-column: 1 / 4;
+  }
+  .stories-article {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 2em;
+
+    &--col:nth-child(1) {
+      flex: 1 0 25%;
+      align-self: center;
+
+      @include u.breakpoint(large) {
+        flex-basis: 30%;
+      }
+    }
+
+    &--col:nth-child(2) {
+      flex: 1 0 75%;
+
+      @include u.breakpoint(large) {
+        flex-basis: 70%;
+      }
+    }
+  }
+
+  .stories-link {
+    margin-block: 1em;
+    color: var(--neutral-verydarkblue);
+
+    &:hover,
+    &:focus {
+      color: var(--primary-red);
+    }
+  }
+}

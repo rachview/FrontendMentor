@@ -1,0 +1,48 @@
+@use '../util/' as u;
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: u.rem(50);
+  color: var(--neutral-verydarkblue);
+}
+
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: u.rem(30);
+  color: var(--primary-orange);
+  margin-block: 0.5em;
+}
+
+h3 {
+  font-size: u.rem(28);
+  color: var(--neutral-grayblue);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 700;
+  font-size: u.rem(18);
+  letter-spacing: u.rem(0.5);
+  cursor: pointer;
+}

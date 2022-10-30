@@ -1,0 +1,63 @@
+@use '../util/' as u;
+@use '../global' as g;
+
+nav {
+  position: absolute;
+  background-color: var(--neutral-white);
+  box-shadow: none;
+  width: 70vw;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  transform: translateX(100%);
+  transition: 250ms ease-in-out transform, box-shadow 250ms ease-in-out;
+
+  @include u.breakpoint(large) {
+    position: relative;
+    max-width: unset;
+    box-shadow: none;
+    transform: unset;
+  }
+
+  .nav-list {
+    margin: 15vh 0 0 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    @include u.breakpoint(large) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: end;
+      margin: 0;
+    }
+  }
+
+  .nav-item {
+    padding: 0 2em;
+  }
+
+  .nav-link {
+    color: var(--neutral-verydarkblue);
+    font-weight: 400;
+
+    @include u.breakpoint(large) {
+      color: var(--neutral-darkgrayblue);
+      font-weight: 700;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--primary-red);
+    }
+  }
+}
+
+.nav-is-open {
+  nav {
+    transform: translateX(0);
+    box-shadow: 0 0 0 100em g.$transparent;
+  }
+}

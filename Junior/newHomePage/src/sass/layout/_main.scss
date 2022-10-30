@@ -1,0 +1,17 @@
+@use '.././util/' as u;
+
+main {
+  padding: 0 u.em(15);
+  display: grid;
+  gap: 4em;
+
+  @include u.breakpoint(large) {
+    max-width: u.em(1440);
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'header header'
+      'hero aside'
+      'articles articles';
+  }
+}

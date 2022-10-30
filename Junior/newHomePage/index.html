@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor: News Homepage</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- js -->
+    <script type="module" src="./src/js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./src/imgs/logo.svg" alt="W logo" />
+
+      <button class="menu-button">
+        <!-- Open svg -->
+        <svg
+          class="menubox"
+          width="40"
+          height="17"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#00001A" fill-rule="evenodd">
+            <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+            <path d="M0 0h40v3H0z" />
+          </g>
+        </svg>
+
+        <!-- Close svg -->
+        <svg
+          class="closebox"
+          width="32"
+          height="31"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#00001A" fill-rule="evenodd">
+            <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+            <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+          </g>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="nav-list">
+          <a href="#" class="nav-link">
+            <li class="nav-item">Home</li>
+          </a>
+          <a href="#" class="nav-link">
+            <li class="nav-item">New</li>
+          </a>
+          <a href="#" class="nav-link">
+            <li class="nav-item">Popular</li>
+          </a>
+          <a href="#" class="nav-link">
+            <li class="nav-item">Trending</li>
+          </a>
+          <a href="#" class="nav-link">
+            <li class="nav-item">Categories</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <article class="hero-img"></article>
+        <article class="hero-body">
+          <div class="hero-body__col">
+            <h1 class="hero-title">The Bright Future of Web 3.0?</h1>
+          </div>
+          <div class="hero-body__col">
+            <p class="hero-desc">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button class="hero-btn">Read More</button>
+          </div>
+        </article>
+      </section>
+
+      <aside class="aside">
+        <h2 class="aside-title">New</h2>
+        <article class="aside-article">
+          <a class="aside-article--link" href="#">Hydrogen VS Electric Cars</a>
+          <p class="aside-article--desc">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </article>
+
+        <article class="aside-article">
+          <a class="aside-article--link" href="#"
+            >The Downsides of AI Artistry</a
+          >
+          <p class="aside-article--desc">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </article>
+
+        <article class="aside-article">
+          <a class="aside-article--link" href="#">Is VC Funding Drying Up?</a>
+          <p class="aside-article--desc">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </article>
+      </aside>
+
+      <section class="stories">
+        <article class="stories-article">
+          <div class="stories-article--col">
+            <img src="./src/imgs/image-retro-pcs.jpg" alt="A retro computer" />
+          </div>
+          <div class="stories-article--col">
+            <h3 class="stories-number">01</h3>
+            <a class="stories-link" href="#">Reviving Retro PCs</a>
+            <p class="stories-desc">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </article>
+
+        <article class="stories-article">
+          <div class="stories-article--col">
+            <img
+              src="./src/imgs/image-top-laptops.jpg"
+              alt="A black and red keyboard"
+            />
+          </div>
+          <div class="stories-article--col">
+            <h3 class="stories-number">02</h3>
+            <a class="stories-link" href="#">Top 10 Laptops of 2022</a>
+            <p class="stories-desc">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </article>
+
+        <article class="stories-article">
+          <div class="stories-article--col">
+            <img
+              src="./src/imgs/image-gaming-growth.jpg"
+              alt="A man levitating a game controller in his hand"
+            />
+          </div>
+          <div class="stories-article--col">
+            <h3 class="stories-number">03</h3>
+            <a class="stories-link" href="#">The Growth of Gaming</a>
+            <p class="stories-desc">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

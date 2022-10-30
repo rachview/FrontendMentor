@@ -1,0 +1,50 @@
+@use '../util/' as u;
+
+header {
+  padding-block: u.em(30);
+
+  @include u.breakpoint(large) {
+    max-width: u.em(1440);
+    margin: 0 auto;
+    grid-area: header;
+    grid-column: 1 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-button {
+    z-index: 20;
+    position: absolute;
+    top: 0.875em;
+    right: 0;
+    background: transparent;
+    border: none;
+    display: grid;
+    place-items: center;
+    padding: 2em;
+    cursor: pointer;
+
+    @include u.breakpoint(large) {
+      display: none;
+    }
+  }
+}
+
+.closebox {
+  display: none;
+}
+
+.menubox {
+  display: block;
+}
+
+.nav-is-open {
+  .menubox {
+    display: none;
+  }
+
+  .closebox {
+    display: block;
+  }
+}
