@@ -1,0 +1,14 @@
+@use '../util/' as u;
+
+main {
+  margin: 0 auto;
+  max-width: 95vw;
+
+  @include u.breakpoint(medium) {
+    max-width: 50vw;
+  }
+
+  @include u.breakpoint(large) {
+    max-width: u.em(300);
+  }
+}

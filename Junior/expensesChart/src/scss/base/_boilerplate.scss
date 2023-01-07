@@ -1,0 +1,35 @@
+@use '../util/' as u;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: u.$font;
+  font-weight: 400;
+  font-size: u.rem(18);
+  color: var(--s-dk);
+  background-color: var(--s-lt);
+
+  @include u.breakpoint(medium) {
+    font-size: u.rem(22);
+  }
+
+  @include u.breakpoint(large) {
+    font-size: u.rem(25);
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

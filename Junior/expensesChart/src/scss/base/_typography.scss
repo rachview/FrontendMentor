@@ -1,0 +1,36 @@
+@use '../util/' as u;
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+///Font alternations
+//Balance in header div
+//Total and percentage in body div
+
+.balance,
+.total {
+  font-size: u.rem(30);
+}
+
+.balance,
+.percentage,
+.total {
+  font-weight: 700;
+}

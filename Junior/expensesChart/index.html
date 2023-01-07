@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <!-- JS -->
+    <script type="module" src="./src/js/main.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor: Expenses chart component</title>
+  </head>
+  <body>
+    <main>
+      <!-- Header -->
+      <section class="header">
+        <!-- Header text -->
+        <div class="header__col">
+          <div class="header__col--row">My balance</div>
+          <div class="header__col--row balance">$921.48</div>
+        </div>
+        <!-- Logo -->
+        <div class="header__col">
+          <img src="./src/assets/images/logo.svg" alt="Chart logo" />
+        </div>
+      </section>
+
+      <!-- Body -->
+      <section class="body">
+        <div class="body__row">
+          <!-- Title -->
+          <div class="body__row--title">
+            <h2 class="title">Spending - Last 7 days</h2>
+          </div>
+          <!-- Start bar chart -->
+          <!-- Using Chart.js -->
+          <canvas class="canvas-container" id="expensesChart"></canvas>
+          <!-- End bar chart -->
+        </div>
+        <div
+          class="body__row section-body__grid position-relative horizontal-bar"
+        >
+          <!-- Total -->
+          <div class="body__row--total margin-top">
+            <p>Total this month</p>
+            <span class="total">$478.33</span>
+          </div>
+          <!-- Percent -->
+          <div class="body__row--percent align-right">
+            <span class="percentage">+2.4%</span>
+            <p>from last month</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

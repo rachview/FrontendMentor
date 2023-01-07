@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+section.header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+}
+
+.section-body__grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  align-items: flex-end;
+}
